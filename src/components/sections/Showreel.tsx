@@ -24,7 +24,7 @@ export default function Showreel() {
                     <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/20 border border-white/10">
                         <VideoPlayer
                             src="/videos/showreel/anil-pappu-showreel.mp4"
-                            poster="/videos/showreel/anil-pappu-showreel.mp4#t=3"
+                            poster="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2525&auto=format&fit=crop"
                             className="w-full h-full"
                         />
                     </div>

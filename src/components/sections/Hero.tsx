@@ -26,6 +26,7 @@ export default function Hero() {
           muted
           loop
           playsInline
+          poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2070&auto=format&fit=crop"
           className="w-full h-full object-cover opacity-60"
         >
           {/* Priority 1: Local file if you drop one in public/videos/hero.mp4 */}
