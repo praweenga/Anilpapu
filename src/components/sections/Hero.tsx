@@ -51,7 +51,7 @@ export default function Hero() {
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white mix-blend-overlay">
             Hello.
             <br />
-            <span className="text-white/80">I'm Anil Pappu.</span>
+            <span className="text-white/80">I&apos;m Anil Pappu.</span>
           </h1>
           <p className="max-w-xl mx-auto text-xl md:text-2xl text-white/70 font-light tracking-wide">
             A Creative Video Strategist with over a decade of experience in Video Production & Motion Design.

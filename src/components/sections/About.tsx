@@ -147,7 +147,7 @@ export default function About() {
                                 <span className="text-neutral-500">Refined.</span>
                             </h2>
                             <p className="text-xl text-neutral-400 leading-relaxed max-w-lg">
-                                For me, it's never just about editing a video—it's about bringing a story to life. I focus on creating visuals that carry emotion, meaning, and a lasting impact.
+                                For me, it&apos;s never just about editing a video—it&apos;s about bringing a story to life. I focus on creating visuals that carry emotion, meaning, and a lasting impact.
                             </p>
                         </div>
 
