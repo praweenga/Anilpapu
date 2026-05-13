@@ -1,54 +1,73 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import VideoPlayer from "@/components/ui/VideoPlayer";
+import { ArrowUpRight, Play } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { projects } from "@/lib/data";
 
 export default function VideoScroll() {
-    const targetRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: targetRef,
-    });
+  return (
+    <section id="works" className="bg-black px-5 py-28 text-white md:px-10 lg:px-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-16 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+          <div>
+            <p className="text-sm uppercase tracking-[0.34em] text-white/38">Selected work</p>
+            <h2 className="mt-5 text-5xl font-semibold leading-none md:text-8xl">Motion Gallery</h2>
+          </div>
+          <p className="max-w-2xl text-lg leading-8 text-white/58">
+            A rolling sequence of films, product stories, brand motion, and event work. Each frame is treated like an entry point into the case study.
+          </p>
+        </div>
 
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
+        <div className="space-y-4">
+          {projects.map((project, index) => (
+            <Link key={project.id} href={`/work/${project.id}`} className="group block">
+              <article className="relative min-h-[440px] overflow-hidden rounded-[1.25rem] border border-white/10 bg-neutral-950 transition-colors duration-300 hover:border-white/28 md:min-h-[520px]">
+                <Image
+                  src={project.video.poster}
+                  alt={project.title}
+                  fill
+                  sizes="100vw"
+                  className="object-cover opacity-48 transition duration-500 group-hover:scale-[1.02] group-hover:opacity-62"
+                  priority={index < 2}
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.62)_42%,rgba(0,0,0,0.2)_100%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(255,255,255,0.12),transparent_28%)]" />
 
-    return (
-        <section ref={targetRef} className="relative h-[300vh] bg-black" id="works">
-            <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-black/10 z-10 pointer-events-none" />
+                <div className="relative z-10 flex min-h-[440px] flex-col justify-between p-6 md:min-h-[520px] md:p-10 lg:p-12">
+                  <div className="flex items-start justify-between gap-8">
+                    <span className="font-mono text-6xl text-white/18 md:text-8xl">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-black transition group-hover:scale-110">
+                      <ArrowUpRight className="h-6 w-6" />
+                    </span>
+                  </div>
 
-                <motion.div style={{ x }} className="flex gap-12 px-12 md:px-32 items-center">
-                    {/* Title Block */}
-                    <div className="flex flex-col justify-center min-w-[400px] md:min-w-[500px] shrink-0 pr-12">
-                        <h2 className="text-5xl md:text-7xl font-bold leading-tight text-white">
-                            Motion <br />
-                            <span className="text-neutral-500">Gallery</span>
-                        </h2>
-                        <p className="mt-8 text-xl text-neutral-400 max-w-md leading-relaxed">
-                            A journey through frames and time. Scroll to explore our cinematic universe.
-                        </p>
+                  <div className="grid gap-10 lg:grid-cols-[0.9fr_0.7fr] lg:items-end">
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.28em] text-white/45">{project.category}</p>
+                      <h3 className="mt-4 max-w-3xl text-5xl font-semibold leading-none md:text-7xl">{project.title}</h3>
                     </div>
-
-                    {/* Video Cards */}
-                    {projects.map((project) => (
-                        <div
-                            key={project.id}
-                            className="group relative h-[50vh] w-[80vh] flex-shrink-0 overflow-hidden rounded-3xl bg-neutral-900 border border-white/10 shadow-2xl"
-                        >
-                            <VideoPlayer
-                                src={project.videoUrl}
-                                poster={project.thumbnail}
-                                className="w-full h-full"
-                            />
-                            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                <h3 className="text-2xl font-bold text-white">{project.title}</h3>
-                                <p className="text-sm text-neutral-400 mt-2">{project.category}</p>
-                            </div>
-                        </div>
-                    ))}
-                </motion.div>
-            </div>
-        </section>
-    );
+                    <div>
+                      <p className="max-w-xl text-base leading-7 text-white/68">{project.description}</p>
+                      <div className="mt-8 flex flex-wrap gap-3 text-xs uppercase tracking-[0.18em] text-white/42">
+                        <span>{project.client}</span>
+                        <span>/</span>
+                        <span>{project.role}</span>
+                        <span>/</span>
+                    <span>{project.year}</span>
+                  </div>
+                  <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-white/16 bg-black/35 px-4 py-2 text-xs uppercase tracking-[0.18em] text-white/75 backdrop-blur">
+                        <Play className="h-3.5 w-3.5 fill-white" />
+                        Watch film
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

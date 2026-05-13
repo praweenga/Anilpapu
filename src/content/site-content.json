@@ -1,0 +1,160 @@
+{
+  "hero": {
+    "title": "Showreel 2025",
+    "video": {
+      "provider": "mux",
+      "playbackId": "nbO9XqKqwb4FH01bi5vkPVx6a2IYmawYhhFlfbnvMfYM",
+      "assetId": "1WTxsPLXHsJ01vkkg2LxRM5W1imvX6TAIee1yFhdAP4U",
+      "poster": "https://image.mux.com/nbO9XqKqwb4FH01bi5vkPVx6a2IYmawYhhFlfbnvMfYM/thumbnail.jpg?time=2&width=1600",
+      "previewPoster": "https://image.mux.com/nbO9XqKqwb4FH01bi5vkPVx6a2IYmawYhhFlfbnvMfYM/thumbnail.jpg?time=8&width=1600",
+      "aspect": "16:9",
+      "duration": 71.442667
+    }
+  },
+  "showreel": {
+    "title": "Showreel 2025",
+    "video": {
+      "provider": "mux",
+      "playbackId": "nbO9XqKqwb4FH01bi5vkPVx6a2IYmawYhhFlfbnvMfYM",
+      "assetId": "1WTxsPLXHsJ01vkkg2LxRM5W1imvX6TAIee1yFhdAP4U",
+      "poster": "https://image.mux.com/nbO9XqKqwb4FH01bi5vkPVx6a2IYmawYhhFlfbnvMfYM/thumbnail.jpg?time=2&width=1600",
+      "previewPoster": "https://image.mux.com/nbO9XqKqwb4FH01bi5vkPVx6a2IYmawYhhFlfbnvMfYM/thumbnail.jpg?time=8&width=1600",
+      "aspect": "16:9",
+      "duration": 71.442667
+    }
+  },
+  "motionGallery": [
+    {
+      "id": "mee-nestham",
+      "title": "Mee Nestham",
+      "category": "Short Film",
+      "description": "An emotional narrative shaped around quiet connection, patient pacing, and intimate visual rhythm.",
+      "year": "2024",
+      "role": "Director / Editor",
+      "client": "Independent Production",
+      "btsImages": [
+        "/images/portfolio/varnam-1.jpg",
+        "/images/portfolio/varnam-2.jpg"
+      ],
+      "video": {
+        "provider": "mux",
+        "playbackId": "iMqHIiGEip01hHRZrHLijQQJXy9z5Cfl6TtMyIa5J1xA",
+        "assetId": "ngfKG7culpRiag3tlafl93m25OUnCeTrIpZFtjN102d00",
+        "poster": "https://image.mux.com/iMqHIiGEip01hHRZrHLijQQJXy9z5Cfl6TtMyIa5J1xA/thumbnail.jpg?time=2&width=1600",
+        "previewPoster": "https://image.mux.com/iMqHIiGEip01hHRZrHLijQQJXy9z5Cfl6TtMyIa5J1xA/thumbnail.jpg?time=8&width=900",
+        "aspect": "16:9",
+        "duration": 110.162667
+      }
+    },
+    {
+      "id": "otsi-logo-story",
+      "title": "OTSI Logo Story",
+      "category": "Brand Identity",
+      "description": "A technology-led logo story using AI-assisted motion, brand pacing, and clean design transitions.",
+      "year": "2024",
+      "role": "Motion Designer",
+      "client": "OTSI Technologies",
+      "btsImages": [
+        "/images/portfolio/margam.jpg",
+        "/images/portfolio/chinna-mushirvada.jpg"
+      ],
+      "video": {
+        "provider": "mux",
+        "playbackId": "qhSOcsW3eOgd3nwjBs3xkiigZ83SeRLZ731J00isMRG8",
+        "assetId": "IRaTJ01Q00pMOZcYszEuX52j8hhq83w3ObDFS7NjwQGL4",
+        "poster": "https://image.mux.com/qhSOcsW3eOgd3nwjBs3xkiigZ83SeRLZ731J00isMRG8/thumbnail.jpg?time=2&width=1600",
+        "previewPoster": "https://image.mux.com/qhSOcsW3eOgd3nwjBs3xkiigZ83SeRLZ731J00isMRG8/thumbnail.jpg?time=8&width=900",
+        "aspect": "16:9",
+        "duration": 83.042667
+      }
+    },
+    {
+      "id": "business-pitch",
+      "title": "Business Pitch",
+      "category": "Commercial",
+      "description": "A sharp corporate presentation film built to translate business value into a confident visual pitch.",
+      "year": "2023",
+      "role": "Creative Director",
+      "client": "Corporate Client",
+      "btsImages": [
+        "/images/portfolio/version-3.jpg",
+        "/images/portfolio/social-media-post.jpg"
+      ],
+      "video": {
+        "provider": "mux",
+        "playbackId": "FQb8DGBUXr87BCVxQQpCPoS02af9jDr00Ah02Rmj1WKTBQ",
+        "assetId": "UM1sinznjCi2EcsJe02SxDL1aBOvLhuk00vy4hQYiCAYc",
+        "poster": "https://image.mux.com/FQb8DGBUXr87BCVxQQpCPoS02af9jDr00Ah02Rmj1WKTBQ/thumbnail.jpg?time=2&width=1600",
+        "previewPoster": "https://image.mux.com/FQb8DGBUXr87BCVxQQpCPoS02af9jDr00Ah02Rmj1WKTBQ/thumbnail.jpg?time=8&width=900",
+        "aspect": "16:9",
+        "duration": 136.776
+      }
+    },
+    {
+      "id": "splink-demo",
+      "title": "Splink Product Demo",
+      "category": "Product Video",
+      "description": "A product demonstration that turns technical features into a clear, watchable product story.",
+      "year": "2023",
+      "role": "Video Editor",
+      "client": "Splink Technologies",
+      "btsImages": [
+        "/images/banners/promotional-banner.jpg",
+        "/images/portfolio/varnam-1.jpg"
+      ],
+      "video": {
+        "provider": "mux",
+        "playbackId": "IeaB6PmH2wM02arM00IXRe2kD9468yDBWiVWF77hA9Kdc",
+        "assetId": "d00ZAH6Z8dn01JscL00O2GaoYIT5vIBeG8nRMo1WrepIB8",
+        "poster": "https://image.mux.com/IeaB6PmH2wM02arM00IXRe2kD9468yDBWiVWF77hA9Kdc/thumbnail.jpg?time=2&width=1600",
+        "previewPoster": "https://image.mux.com/IeaB6PmH2wM02arM00IXRe2kD9468yDBWiVWF77hA9Kdc/thumbnail.jpg?time=8&width=900",
+        "aspect": "16:9",
+        "duration": 126.04
+      }
+    },
+    {
+      "id": "government-event",
+      "title": "Government Event",
+      "category": "Event Coverage",
+      "description": "Official event coverage cut with clarity, pace, and a documentary sense of public occasion.",
+      "year": "2023",
+      "role": "Cinematographer",
+      "client": "Government Organization",
+      "btsImages": [
+        "/images/portfolio/margam.jpg",
+        "/images/portfolio/varnam-2.jpg"
+      ],
+      "video": {
+        "provider": "mux",
+        "playbackId": "gwkkXbZibp9bLka5OxgaDD6JRu01k3h01piyqJ4qWBSB4",
+        "assetId": "pKNjLwDv6vsosugNPACgXk99LjwUz01GvRx1q0002007GyE",
+        "poster": "https://image.mux.com/gwkkXbZibp9bLka5OxgaDD6JRu01k3h01piyqJ4qWBSB4/thumbnail.jpg?time=2&width=1600",
+        "previewPoster": "https://image.mux.com/gwkkXbZibp9bLka5OxgaDD6JRu01k3h01piyqJ4qWBSB4/thumbnail.jpg?time=8&width=900",
+        "aspect": "16:9",
+        "duration": 56.442667
+      }
+    },
+    {
+      "id": "smc-event-video",
+      "title": "SMC Event Video",
+      "category": "Event Coverage",
+      "description": "A community event film assembled around momentum, group energy, and memorable ceremony moments.",
+      "year": "2024",
+      "role": "Director / Editor",
+      "client": "SMC Organization",
+      "btsImages": [
+        "/images/portfolio/chinna-mushirvada.jpg",
+        "/images/portfolio/version-3.jpg"
+      ],
+      "video": {
+        "provider": "mux",
+        "playbackId": "KFnOKJx8PTOOaZVx28pXmnWx5FBZK96WJxkkxULQNSE",
+        "assetId": "hylLkM8OvE6fFgCOx5fPLh7b5SM1tW00NzRrruJrL67k",
+        "poster": "https://image.mux.com/KFnOKJx8PTOOaZVx28pXmnWx5FBZK96WJxkkxULQNSE/thumbnail.jpg?time=2&width=1600",
+        "previewPoster": "https://image.mux.com/KFnOKJx8PTOOaZVx28pXmnWx5FBZK96WJxkkxULQNSE/thumbnail.jpg?time=8&width=900",
+        "aspect": "16:9",
+        "duration": 55.042667
+      }
+    }
+  ]
+}

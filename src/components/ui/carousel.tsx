@@ -1,14 +1,13 @@
 "use client";
 import Image from "next/image";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
-import ReactPlayer from "react-player";
 import { useState, useRef, useId, useEffect } from "react";
 
 export interface SlideData {
   title: string;
   button: string;
   src: string;
-  type?: "image" | "video" | "player";
+  type?: "image" | "video";
   poster?: string;
 }
 
@@ -17,10 +16,9 @@ interface SlideProps {
   index: number;
   current: number;
   handleSlideClick: (index: number) => void;
-  inView?: boolean;
 }
 
-const Slide = ({ slide, index, current, handleSlideClick, inView }: SlideProps) => {
+const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   const slideRef = useRef<HTMLLIElement>(null);
 
   const xRef = useRef(0);
@@ -70,8 +68,6 @@ const Slide = ({ slide, index, current, handleSlideClick, inView }: SlideProps) 
   const { src, button, title, type, poster } = slide;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const ReactPlayerAny = ReactPlayer as any;
-
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
@@ -98,20 +94,7 @@ const Slide = ({ slide, index, current, handleSlideClick, inView }: SlideProps) 
                 : "none",
           }}
         >
-          {type === "player" ? (
-            <div className="absolute inset-0">
-              <ReactPlayerAny
-                url={src}
-                playing={!!inView && current === index}
-                controls
-                width="100%"
-                height="100%"
-                light={poster}
-                muted
-                playsinline
-              />
-            </div>
-          ) : type === "video" ? (
+          {type === "video" ? (
             <video
               className="absolute inset-0 w-[120%] h-[120%] object-cover"
               src={src}
@@ -184,10 +167,9 @@ const CarouselControl = ({
 
 interface CarouselProps {
   slides: SlideData[];
-  inView?: boolean;
 }
 
-export default function Carousel({ slides, inView }: CarouselProps) {
+export default function Carousel({ slides }: CarouselProps) {
   const [current, setCurrent] = useState(0);
 
   const handlePreviousClick = () => {
@@ -226,7 +208,6 @@ export default function Carousel({ slides, inView }: CarouselProps) {
             index={index}
             current={current}
             handleSlideClick={handleSlideClick}
-            inView={inView}
           />
         ))}
       </ul>

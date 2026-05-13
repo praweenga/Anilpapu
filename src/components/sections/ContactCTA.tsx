@@ -1,56 +1,52 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowRight, Mail, Instagram, Twitter, Linkedin } from "lucide-react";
+import { ArrowRight, Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
 import Link from "next/link";
+
+const contactLinks = [
+  { label: "Instagram", href: "https://www.instagram.com/anil_bonds/", icon: Instagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/anilpappu/", icon: Linkedin },
+  { label: "WhatsApp", href: "https://wa.me/917674074148", icon: MessageCircle },
+];
 
 export default function ContactCTA() {
   return (
-    <section className="py-32 px-4 md:px-6 bg-neutral-950 text-white" id="contact">
-      <div className="container mx-auto max-w-4xl text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="space-y-8"
-        >
-          <h2 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8">
-            Let&apos;s create something <br />
-            <span className="text-neutral-600">extraordinary.</span>
+    <section className="bg-black px-5 py-28 text-white md:px-10 lg:px-16" id="contact">
+      <div className="mx-auto grid max-w-7xl gap-12 border-t border-white/10 pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+        <div>
+          <p className="text-sm uppercase tracking-[0.3em] text-white/40">Contact</p>
+          <h2 className="mt-5 max-w-4xl text-5xl font-semibold leading-none md:text-8xl">
+            Let&apos;s build the next film.
           </h2>
+        </div>
 
-          <p className="text-xl text-neutral-400 max-w-2xl mx-auto font-light">
-            Available for freelance projects and collaborations worldwide.
+        <div>
+          <p className="text-lg leading-8 text-white/58">
+            Available for film edits, brand stories, product demos, motion packages, and event coverage.
           </p>
-
-          <div className="pt-12">
-            <Link
-              href="mailto:hello@anilpappu.com"
-              className="group inline-flex items-center gap-4 text-2xl md:text-3xl font-medium hover:text-blue-500 transition-colors"
-            >
-              <span>hello@anilpappu.com</span>
-              <ArrowRight className="w-6 h-6 transform group-hover:translate-x-2 transition-transform" />
-            </Link>
-          </div>
-
-          {/* Socials */}
-          <div className="flex justify-center gap-8 pt-16">
-            {[
-              { icon: Instagram, href: "#" },
-              { icon: Twitter, href: "#" },
-              { icon: Linkedin, href: "#" },
-              { icon: Mail, href: "mailto:hello@anilpappu.com" },
-            ].map((social, index) => (
+          <Link
+            href="mailto:anilbonds2016@gmail.com"
+            className="mt-8 inline-flex items-center gap-3 text-2xl font-medium text-white transition hover:text-white/65"
+          >
+            <Mail className="h-6 w-6" />
+            anilbonds2016@gmail.com
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+          <div className="mt-10 flex flex-wrap gap-3">
+            {contactLinks.map((link) => (
               <Link
-                key={index}
-                href={social.href}
-                className="p-4 rounded-full bg-white/5 hover:bg-white/10 hover:scale-110 transition-all duration-300"
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-white/65 transition hover:border-white/30 hover:text-white"
               >
-                <social.icon className="w-6 h-6" />
+                <link.icon className="h-4 w-4" />
+                {link.label}
               </Link>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -59,6 +59,7 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", "sans-serif"],
         mono: ["var(--font-geist-mono)", "monospace"],
+        display: ["var(--font-display)", "serif"],
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-out forwards",

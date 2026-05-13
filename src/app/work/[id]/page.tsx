@@ -1,130 +1,77 @@
 "use client";
 
-import { useParams } from "next/navigation";
-import { projects } from "@/lib/data";
-import VideoPlayer from "@/components/ui/VideoPlayer";
-import { motion } from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { ArrowRight, ArrowLeft } from "lucide-react";
-import Image from "next/image";
+import { useParams } from "next/navigation";
 import SmoothScroll from "@/components/SmoothScroll";
+import VideoPlayer from "@/components/ui/VideoPlayer";
+import { projects } from "@/lib/data";
 
 export default function ProjectDetail() {
-    const params = useParams();
-    const project = projects.find((p) => p.id === params.id);
+  const params = useParams();
+  const project = projects.find((item) => item.id === params.id);
 
-    if (!project) {
-        return <div className="min-h-screen flex items-center justify-center text-white">Project not found</div>;
-    }
+  if (!project) {
+    return <div className="grid min-h-screen place-items-center bg-black text-white">Project not found</div>;
+  }
 
-    const currentIndex = projects.findIndex((p) => p.id === project.id);
-    const nextProject = projects[(currentIndex + 1) % projects.length];
+  const currentIndex = projects.findIndex((item) => item.id === project.id);
+  const nextProject = projects[(currentIndex + 1) % projects.length];
 
-    return (
-        <SmoothScroll>
-            <main className="min-h-screen bg-black text-white">
-                {/* Navigation */}
-                <nav className="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center mix-blend-difference">
-                    <Link href="/#work" className="flex items-center gap-2 text-sm font-medium hover:opacity-70 transition-opacity">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Work
-                    </Link>
-                </nav>
+  return (
+    <SmoothScroll>
+      <main className="min-h-screen bg-black text-white">
+        <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-5 py-5 text-sm md:px-10 lg:px-16">
+          <Link href="/#works" className="inline-flex items-center gap-2 text-white/75 transition hover:text-white">
+            <ArrowLeft className="h-4 w-4" />
+            Work
+          </Link>
+          <Link href="/#contact" className="text-white/75 transition hover:text-white">
+            Contact
+          </Link>
+        </nav>
 
-                {/* Hero Video */}
-                <section className="relative h-[80vh] w-full mt-20 px-4 md:px-6">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                        className="w-full h-full rounded-3xl overflow-hidden"
-                    >
-                        <VideoPlayer
-                            src={project.videoUrl}
-                            poster={project.thumbnail}
-                            className="w-full h-full"
-                            autoPlay
-                        />
-                    </motion.div>
-                </section>
+        <section className="px-5 pb-16 pt-28 md:px-10 lg:px-16">
+          <div className="mx-auto max-w-7xl">
+            <p className="text-sm uppercase tracking-[0.28em] text-white/40">{project.category}</p>
+            <h1 className="mt-5 max-w-5xl text-5xl font-semibold leading-none md:text-8xl">{project.title}</h1>
+            <div className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-neutral-950">
+              <VideoPlayer video={project.video} title={project.title} poster={project.video.poster} autoPlay muted preload="auto" />
+            </div>
+          </div>
+        </section>
 
-                {/* Project Info */}
-                <section className="py-24 px-4 md:px-6 container mx-auto max-w-5xl">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="md:col-span-2 space-y-8"
-                        >
-                            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">{project.title}</h1>
-                            <p className="text-xl md:text-2xl text-neutral-400 leading-relaxed font-light">
-                                {project.description}
-                            </p>
-                        </motion.div>
+        <section className="px-5 py-16 md:px-10 lg:px-16">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+            <p className="text-2xl leading-10 text-white/72 md:text-4xl md:leading-tight">
+              {project.description}
+            </p>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
-                            className="space-y-8 pt-4 border-t border-white/10 md:border-t-0"
-                        >
-                            <div>
-                                <h3 className="text-sm text-neutral-500 uppercase tracking-wider mb-2">Client</h3>
-                                <p className="text-lg">{project.client}</p>
-                            </div>
-                            <div>
-                                <h3 className="text-sm text-neutral-500 uppercase tracking-wider mb-2">Role</h3>
-                                <p className="text-lg">{project.role}</p>
-                            </div>
-                            <div>
-                                <h3 className="text-sm text-neutral-500 uppercase tracking-wider mb-2">Year</h3>
-                                <p className="text-lg">{project.year}</p>
-                            </div>
-                        </motion.div>
-                    </div>
-                </section>
+            <div className="grid gap-5 border-t border-white/10 pt-6 lg:border-t-0 lg:pt-0">
+              <Meta label="Client" value={project.client} />
+              <Meta label="Role" value={project.role} />
+              <Meta label="Year" value={project.year} />
+            </div>
+          </div>
+        </section>
 
-                {/* BTS Images */}
-                <section className="py-12 px-4 md:px-6 container mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                        {project.btsImages.map((img, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.2 }}
-                                className="relative aspect-video rounded-2xl overflow-hidden"
-                            >
-                                <Image
-                                    src={img}
-                                    alt="Behind the scenes"
-                                    fill
-                                    className="object-cover hover:scale-105 transition-transform duration-700"
-                                />
-                            </motion.div>
-                        ))}
-                    </div>
-                </section>
+        <section className="border-t border-white/10 px-5 py-24 text-center md:px-10 lg:px-16">
+          <p className="text-sm uppercase tracking-[0.28em] text-white/35">Next project</p>
+          <Link href={`/work/${nextProject.id}`} className="group mt-6 inline-flex items-center gap-4 text-4xl font-semibold md:text-7xl">
+            {nextProject.title}
+            <ArrowRight className="h-8 w-8 transition group-hover:translate-x-2 md:h-12 md:w-12" />
+          </Link>
+        </section>
+      </main>
+    </SmoothScroll>
+  );
+}
 
-                {/* Next Project */}
-                <section className="py-32 px-4 md:px-6 border-t border-white/10 mt-24">
-                    <div className="container mx-auto max-w-4xl text-center">
-                        <p className="text-sm text-neutral-500 uppercase tracking-wider mb-8">Next Project</p>
-                        <Link href={`/work/${nextProject.id}`} className="group inline-block">
-                            <h2 className="text-6xl md:text-9xl font-bold tracking-tighter group-hover:text-neutral-400 transition-colors duration-500">
-                                {nextProject.title}
-                            </h2>
-                            <div className="mt-8 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                                <span className="text-xl">View Case Study</span>
-                                <ArrowRight className="w-6 h-6" />
-                            </div>
-                        </Link>
-                    </div>
-                </section>
-            </main>
-        </SmoothScroll>
-    );
+function Meta({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="grid grid-cols-[110px_1fr] gap-4 border-b border-white/10 pb-5">
+      <span className="text-xs uppercase tracking-[0.22em] text-white/35">{label}</span>
+      <span className="text-white/80">{value}</span>
+    </div>
+  );
 }

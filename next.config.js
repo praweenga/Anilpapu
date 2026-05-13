@@ -4,7 +4,8 @@ const nextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.pexels.com' },
       { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: 'commondatastorage.googleapis.com' },
+      { protocol: 'https', hostname: 'image.mux.com' },
+      { protocol: 'https', hostname: 'image.mux.dev' },
     ],
   },
 };

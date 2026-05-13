@@ -12,7 +12,7 @@ const services = [
   },
   {
     title: "Distribution & Social",
-    copy: "Shorts and carousels crafted for discovery across YouTube, Instagram, LinkedIn and X—optimized titles and thumbnails.",
+    copy: "Shorts and carousels crafted for discovery across social feeds with optimized titles and thumbnails.",
   },
 ];
 
@@ -41,4 +41,3 @@ export default function ServicesCards() {
     </section>
   );
 }
-
