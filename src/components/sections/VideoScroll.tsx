@@ -46,14 +46,7 @@ export default function VideoScroll() {
                     </div>
                     <div>
                       <p className="max-w-xl text-base leading-7 text-white/68">{project.description}</p>
-                      <div className="mt-8 flex flex-wrap gap-3 text-xs uppercase tracking-[0.18em] text-white/42">
-                        <span>{project.client}</span>
-                        <span>/</span>
-                        <span>{project.role}</span>
-                        <span>/</span>
-                    <span>{project.year}</span>
-                  </div>
-                  <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-white/16 bg-black/35 px-4 py-2 text-xs uppercase tracking-[0.18em] text-white/75 backdrop-blur">
+                      <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-white/16 bg-black/35 px-4 py-2 text-xs uppercase tracking-[0.18em] text-white/75 backdrop-blur">
                         <Play className="h-3.5 w-3.5 fill-white" />
                         Watch film
                       </div>

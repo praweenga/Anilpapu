@@ -42,16 +42,10 @@ export default function ProjectDetail() {
         </section>
 
         <section className="px-5 py-16 md:px-10 lg:px-16">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.2fr_0.8fr]">
-            <p className="text-2xl leading-10 text-white/72 md:text-4xl md:leading-tight">
+          <div className="mx-auto max-w-7xl">
+            <p className="max-w-4xl text-2xl leading-10 text-white/72 md:text-4xl md:leading-tight">
               {project.description}
             </p>
-
-            <div className="grid gap-5 border-t border-white/10 pt-6 lg:border-t-0 lg:pt-0">
-              <Meta label="Client" value={project.client} />
-              <Meta label="Role" value={project.role} />
-              <Meta label="Year" value={project.year} />
-            </div>
           </div>
         </section>
 
@@ -64,14 +58,5 @@ export default function ProjectDetail() {
         </section>
       </main>
     </SmoothScroll>
-  );
-}
-
-function Meta({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="grid grid-cols-[110px_1fr] gap-4 border-b border-white/10 pb-5">
-      <span className="text-xs uppercase tracking-[0.22em] text-white/35">{label}</span>
-      <span className="text-white/80">{value}</span>
-    </div>
   );
 }

@@ -36,10 +36,9 @@ export default function About() {
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
           <div>
             <p className="text-sm uppercase tracking-[0.34em] text-white/38">Creative Communication System</p>
-            <h2 className="mt-5 max-w-5xl font-display text-4xl leading-[0.98] md:text-5xl lg:text-[4.15rem] lg:leading-[0.9] xl:text-[4.75rem]">
-              <span className="lg:block">Crafting cinematic</span>{" "}
-              <span className="lg:block">visual stories for brands</span>{" "}
-              <span className="lg:block">and digital platforms.</span>
+            <h2 className="mt-5 max-w-5xl font-display text-4xl leading-[0.98] md:text-5xl lg:text-[4.6rem] lg:leading-[0.92] xl:text-[5.4rem]">
+              <span className="lg:block">Crafting visual</span>{" "}
+              <span className="lg:block">stories for brands</span>
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-7 text-white/62 md:text-lg md:leading-8 lg:justify-self-end">

@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Bricolage_Grotesque, Manrope } from "next/font/google";
+import { Lato, Manrope } from "next/font/google";
 import BottomNav from "@/components/site/bottom-nav";
 import Footer from "@/components/site/footer";
 import "./globals.css";
 
-const display = Bricolage_Grotesque({
+const display = Lato({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700", "900"],
 });
 
 const sans = Manrope({
