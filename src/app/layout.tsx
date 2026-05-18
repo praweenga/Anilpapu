@@ -30,6 +30,13 @@ export const metadata: Metadata = {
   title: "Anil Bonds | Brand Communication, Visual Storytelling, Creative Production",
   description:
     "Cinematic portfolio of brand communication, motion-led design, corporate films, AI-assisted visual production, and creative storytelling by Anil Bonds.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
+  },
   openGraph: {
     title: "Anil Bonds | Cinematic Visual Communication Portfolio",
     description: "Selected brand communication, motion design, corporate film, and visual storytelling work by Anil Bonds.",
