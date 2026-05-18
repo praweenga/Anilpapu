@@ -1,9 +1,10 @@
 "use client";
 
-import { ArrowRight, Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { ArrowRight, Instagram, Linkedin, Mail, MessageCircle, Youtube } from "lucide-react";
 import Link from "next/link";
 
 const contactLinks = [
+  { label: "YouTube", href: "https://youtube.com/playlist?list=PLd4vQ1NiNgesPSSqDpc7-hf4rRayMVr8F&si=6Q10aAjQRnpvSH7i", icon: Youtube },
   { label: "Instagram", href: "https://www.instagram.com/anil_bonds/", icon: Instagram },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/anilpappu/", icon: Linkedin },
   { label: "WhatsApp", href: "https://wa.me/917674074148", icon: MessageCircle },

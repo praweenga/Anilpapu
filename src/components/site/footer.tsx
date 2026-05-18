@@ -4,6 +4,9 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-4 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
         <p>© 2026 Anil Bonds. All rights reserved.</p>
         <div className="flex flex-wrap gap-4">
+          <a href="https://youtube.com/playlist?list=PLd4vQ1NiNgesPSSqDpc7-hf4rRayMVr8F&si=6Q10aAjQRnpvSH7i" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">
+            YouTube
+          </a>
           <a href="https://www.instagram.com/anil_bonds/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">
             Instagram
           </a>
