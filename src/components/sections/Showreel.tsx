@@ -11,8 +11,7 @@ export default function Showreel() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 max-w-5xl">
           <div>
-            <p className="text-sm uppercase tracking-[0.34em] text-white/40">Showreel 2025</p>
-            <h2 className="mt-4 max-w-4xl font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">
+            <h2 className="max-w-4xl font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">
               One reel. The full range.
             </h2>
           </div>

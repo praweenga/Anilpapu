@@ -55,15 +55,17 @@ export default function About() {
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover opacity-72"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <Clapperboard className="h-7 w-7 text-white/70" />
-              <p className="mt-5 font-display text-2xl leading-tight md:text-3xl">
-                From concept and strategy to cinematic execution and final delivery.
-              </p>
-              <p className="mt-4 max-w-md text-sm leading-6 text-white/58">
-                Built for organizations, brands, leadership teams, and public-facing communication that demand clarity, quality, and visual impact.
-              </p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
+            <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
+              <div className="max-w-xl rounded-2xl border border-white/12 bg-black/58 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur-md md:p-6">
+                <Clapperboard className="h-7 w-7 text-white/78" />
+                <p className="mt-5 font-display text-2xl leading-tight text-white md:text-3xl">
+                  From concept and strategy to cinematic execution and final delivery.
+                </p>
+                <p className="mt-4 max-w-md text-sm leading-6 text-white/72">
+                  Built for organizations, brands, leadership teams, and public-facing communication that demand clarity, quality, and visual impact.
+                </p>
+              </div>
             </div>
           </div>
 
