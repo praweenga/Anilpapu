@@ -12,16 +12,16 @@ export default function Showreel() {
         <div className="mb-8 max-w-5xl">
           <div>
             <p className="text-sm uppercase tracking-[0.34em] text-white/40">Showreel 2025</p>
-            <h2 className="mt-4 max-w-4xl text-5xl font-semibold leading-[0.96] md:text-6xl lg:text-7xl">
+            <h2 className="mt-4 max-w-4xl font-display text-5xl leading-[0.95] md:text-6xl lg:text-7xl">
               One reel. The full range.
             </h2>
           </div>
-          <div className="mt-6 flex max-w-2xl items-center gap-4 text-white/58">
+          <div className="mt-6 flex max-w-3xl items-center gap-4 text-white/58">
             <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-white/20 bg-white/5">
               <Play className="ml-1 h-4 w-4 fill-white text-white" />
             </span>
             <p className="text-sm leading-6">
-              A single high-signal cut across editing, motion design, product films, event coverage, and AI-assisted visuals.
+              A curated showcase of cinematic storytelling, motion-led design, AI-assisted visual production, and corporate communication films across modern digital platforms.
             </p>
           </div>
         </div>

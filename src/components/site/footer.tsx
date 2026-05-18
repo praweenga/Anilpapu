@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-black px-5 py-8 text-white md:px-10 lg:px-16">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
-        <p>© 2026 Anil Pappu. All rights reserved.</p>
+        <p>© 2026 Anil Bonds. All rights reserved.</p>
         <div className="flex flex-wrap gap-4">
           <a href="https://www.instagram.com/anil_bonds/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">
             Instagram

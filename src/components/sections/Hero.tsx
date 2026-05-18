@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <VideoPlayer
           video={heroVideo}
-          title="Anil Pappu showreel"
+          title="Anil Bonds showreel"
           autoPlay
           muted
           loop
@@ -25,13 +25,15 @@ export default function Hero() {
 
       <div className="relative z-10 flex min-h-[92vh] flex-col justify-end px-5 pb-20 pt-28 md:px-10 lg:px-16">
         <div className="max-w-6xl">
-          <p className="mb-5 text-sm uppercase tracking-[0.32em] text-white/55">Video production / motion / visual direction</p>
-          <h1 className="max-w-5xl text-6xl font-semibold leading-[0.95] md:text-8xl lg:text-[8.5rem]">
-            Anil Pappu
+          <p className="mb-5 max-w-4xl text-xs uppercase tracking-[0.28em] text-white/55 md:text-sm">
+            Brand communication / Visual storytelling / Creative production
+          </p>
+          <h1 className="max-w-5xl font-display text-6xl leading-[0.9] md:text-8xl lg:text-[8rem]">
+            Anil Bonds
           </h1>
           <div className="mt-8 flex max-w-3xl flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <p className="text-lg leading-7 text-white/70 md:text-xl">
-              Cinematic edits, motion-led stories, and polished visual systems for films, brands, products, and public events.
+            <p className="max-w-3xl text-base leading-7 text-white/70 md:text-lg md:leading-8">
+              Transforming ideas, brands, and corporate communication into impactful visual experiences through storytelling, motion design, and cinematic production.
             </p>
             <Link
               href="#works"

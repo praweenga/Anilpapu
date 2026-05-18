@@ -20,7 +20,7 @@ export default function BottomNav() {
           className="hidden items-center gap-2 rounded-full px-4 py-2 text-sm font-medium tracking-wide text-white/85 transition hover:bg-white/10 hover:text-white sm:flex"
         >
           <Aperture className="h-4 w-4" />
-          Anil
+          Anil Bonds
         </Link>
         <div className="flex flex-1 items-center justify-between sm:flex-none sm:gap-1">
           {items.map((item) => (

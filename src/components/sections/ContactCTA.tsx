@@ -14,15 +14,15 @@ export default function ContactCTA() {
     <section className="bg-black px-5 py-28 text-white md:px-10 lg:px-16" id="contact">
       <div className="mx-auto grid max-w-7xl gap-12 border-t border-white/10 pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] text-white/40">Contact</p>
-          <h2 className="mt-5 max-w-4xl text-5xl font-semibold leading-none md:text-8xl">
-            Let&apos;s build the next film.
+          <p className="text-sm uppercase tracking-[0.3em] text-white/40">Let&apos;s connect</p>
+          <h2 className="mt-5 max-w-4xl font-display text-4xl leading-[0.95] md:text-6xl lg:text-7xl">
+            Let&apos;s build visual stories that matter.
           </h2>
         </div>
 
         <div>
-          <p className="text-lg leading-8 text-white/58">
-            Available for film edits, brand stories, product demos, motion packages, and event coverage.
+          <p className="text-base leading-7 text-white/58 md:text-lg md:leading-8">
+            Open to collaborations across corporate communication, brand storytelling, cinematic content production, and modern visual campaigns.
           </p>
           <Link
             href="mailto:anilbonds2016@gmail.com"

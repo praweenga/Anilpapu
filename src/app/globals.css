@@ -6,7 +6,6 @@
 
 @layer base {
   :root {
-    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
     --background: 0 0% 0%;
     /* Pure Black */
     --foreground: 0 0% 98%;
@@ -56,7 +55,7 @@
   h3 {
     font-family: var(--font-display);
     font-weight: 600;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.045em;
     text-wrap: balance;
   }
 

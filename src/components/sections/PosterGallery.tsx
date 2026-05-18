@@ -62,11 +62,11 @@ export default function PosterGallery() {
             <div className="mx-auto max-w-7xl">
                 <div className="mb-10 grid gap-5 md:grid-cols-[0.8fr_1.2fr] md:items-end">
                     <div>
-                        <p className="text-xs uppercase tracking-[0.34em] text-white/38 md:text-sm">Design archive</p>
-                        <h2 className="mt-4 font-display text-4xl leading-none md:text-5xl lg:text-6xl">Visual Arts</h2>
+                        <p className="text-xs uppercase tracking-[0.34em] text-white/38 md:text-sm">Brand Design</p>
+                        <h2 className="mt-4 font-display text-4xl leading-none md:text-5xl lg:text-6xl">Design Communication</h2>
                     </div>
                     <p className="max-w-2xl text-sm leading-6 text-white/58 md:text-base md:leading-7">
-                        A compact archive of posters, campaign visuals, and polished design explorations.
+                        Selected design works spanning campaign visuals, event branding, digital creatives, and communication-driven graphic design.
                     </p>
                 </div>
 

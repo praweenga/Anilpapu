@@ -100,7 +100,7 @@ export default function VideoPlayer({
           debug: false,
           data: {
             env_key: envKey,
-            player_name: "Anil Portfolio Player",
+            player_name: "Anil Bonds Portfolio Player",
             player_init_time: Date.now(),
             video_id: video.playbackId,
             video_title: title,

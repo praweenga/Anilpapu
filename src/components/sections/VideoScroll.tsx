@@ -12,11 +12,8 @@ export default function VideoScroll() {
         <div className="mb-16 grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
             <p className="text-sm uppercase tracking-[0.34em] text-white/38">Selected work</p>
-            <h2 className="mt-5 text-5xl font-semibold leading-none md:text-8xl">Motion Gallery</h2>
+            <h2 className="mt-5 max-w-4xl font-display text-4xl leading-[0.95] md:text-6xl lg:text-7xl">Brand & Motion Showcase</h2>
           </div>
-          <p className="max-w-2xl text-lg leading-8 text-white/58">
-            A rolling sequence of films, product stories, brand motion, and event work. Each frame is treated like an entry point into the case study.
-          </p>
         </div>
 
         <div className="space-y-4">
@@ -45,7 +42,7 @@ export default function VideoScroll() {
                   <div className="grid gap-10 lg:grid-cols-[0.9fr_0.7fr] lg:items-end">
                     <div>
                       <p className="text-sm uppercase tracking-[0.28em] text-white/45">{project.category}</p>
-                      <h3 className="mt-4 max-w-3xl text-5xl font-semibold leading-none md:text-7xl">{project.title}</h3>
+                      <h3 className="mt-4 max-w-3xl font-display text-4xl leading-none md:text-6xl">{project.title}</h3>
                     </div>
                     <div>
                       <p className="max-w-xl text-base leading-7 text-white/68">{project.description}</p>
