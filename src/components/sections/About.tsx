@@ -1,7 +1,8 @@
 "use client";
 
-import { Aperture, Clapperboard, MonitorPlay, Sparkles, Zap } from "lucide-react";
+import { Aperture, ArrowUpRight, Clapperboard, MonitorPlay, Sparkles, Zap } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -44,6 +45,16 @@ export default function About() {
           <p className="max-w-2xl text-base leading-7 text-white/62 md:text-lg md:leading-8 lg:justify-self-end">
             Specialized in cinematic editing, motion-led storytelling, corporate films, AI-assisted visual production, and modern brand communication workflows.
           </p>
+        </div>
+
+        <div className="mt-6 flex justify-start lg:justify-end">
+          <Link
+            href="/works"
+            className="inline-flex items-center gap-3 rounded-full border border-white/14 bg-white/[0.035] px-4 py-3 text-xs uppercase tracking-[0.2em] text-white/78 transition hover:border-white/32 hover:bg-white hover:text-black"
+          >
+            View works
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
         </div>
 
         <div className="mt-12 grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">

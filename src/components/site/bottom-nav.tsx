@@ -1,12 +1,13 @@
 "use client";
 
-import { Aperture, Clapperboard, Home, Mail, MonitorPlay, UserRound } from "lucide-react";
+import { Aperture, BriefcaseBusiness, Clapperboard, Home, Mail, MonitorPlay, UserRound } from "lucide-react";
 import Link from "next/link";
 
 const items = [
   { label: "Home", href: "/#home", icon: Home },
   { label: "Showreel", href: "/#showreel", icon: MonitorPlay },
-  { label: "Work", href: "/#works", icon: Clapperboard },
+  { label: "Projects", href: "/#works", icon: Clapperboard },
+  { label: "Works", href: "/works", icon: BriefcaseBusiness },
   { label: "About", href: "/#about", icon: UserRound },
   { label: "Contact", href: "/#contact", icon: Mail },
 ];
