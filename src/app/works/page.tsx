@@ -1,7 +1,18 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { ArrowLeft, ArrowUpRight, BriefcaseBusiness } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  BriefcaseBusiness,
+  Clapperboard,
+  Compass,
+  MessageSquareText,
+  MonitorPlay,
+  Scissors,
+  Sparkles,
+  SwatchBook,
+} from "lucide-react";
 import Link from "next/link";
 import SmoothScroll from "@/components/SmoothScroll";
 import { aiTools, careerTimeline, coreSkills, expertiseMeters } from "@/lib/career";
@@ -25,16 +36,16 @@ export default function WorksPage() {
               <div className="hidden h-px flex-1 bg-gradient-to-r from-white/0 via-white/12 to-white/0 md:block" />
             </div>
 
-            <div className="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+            <div className="mt-10 grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
               <div>
                 <p className="text-sm uppercase tracking-[0.34em] text-white/38">Works</p>
-                <h1 className="mt-5 max-w-5xl font-display text-5xl leading-[0.92] md:text-7xl lg:text-[5.6rem]">
-                  Career chapters that shaped the editorial point of view.
+                <h1 className="mt-5 max-w-4xl font-display text-4xl leading-[0.94] md:text-6xl lg:text-[4.35rem]">
+                  Work across film, motion, and brand communication.
                 </h1>
               </div>
-              <div className="space-y-6">
-                <p className="max-w-2xl text-base leading-7 text-white/64 md:text-lg md:leading-8">
-                  A timeline of production, motion, and brand communication roles across corporate teams, digital publishers, and live-event storytelling.
+              <div className="space-y-5 lg:pl-10">
+                <p className="max-w-2xl text-base leading-7 text-white/64 md:text-[1.05rem] md:leading-8">
+                  A practical timeline of roles across corporate teams, digital publishers, and live-event production, with a consistent focus on editing, motion, and clear visual communication.
                 </p>
                 <div className="grid gap-3 sm:grid-cols-3">
                   <Metric label="Years in production" value="12+" />
@@ -47,43 +58,59 @@ export default function WorksPage() {
         </section>
 
         <section className="px-5 pb-24 md:px-10 lg:px-16">
-          <div className="mx-auto grid max-w-7xl gap-8 xl:grid-cols-[1.2fr_0.8fr]">
-            <div className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-6 md:p-8 lg:p-10">
+          <div className="mx-auto grid max-w-7xl gap-8 xl:grid-cols-[1.16fr_0.84fr]">
+            <div className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-6 md:p-8 lg:p-9">
               <div className="flex items-center justify-between gap-6 border-b border-white/10 pb-6">
                 <div>
                   <p className="text-sm uppercase tracking-[0.28em] text-white/38">Timeline</p>
-                  <h2 className="mt-3 font-display text-3xl md:text-4xl">Work Experience</h2>
+                  <h2 className="mt-3 font-display text-[2rem] md:text-[2.35rem]">Work Experience</h2>
                 </div>
                 <div className="hidden h-12 w-12 rounded-full border border-white/12 bg-white/[0.04] md:grid md:place-items-center">
                   <BriefcaseBusiness className="h-5 w-5 text-white/72" />
                 </div>
               </div>
 
-              <div className="relative mt-10">
-                <div className="absolute bottom-4 left-[7.2rem] top-4 hidden w-px bg-gradient-to-b from-white/0 via-white/18 to-white/0 md:block lg:left-[10.25rem]" />
+              <div className="mt-10 space-y-7">
+                <div className="grid gap-6 md:grid-cols-[8.5rem_2.5rem_minmax(0,1fr)] lg:grid-cols-[10rem_2.75rem_minmax(0,1fr)]">
+                  <div />
+                  <div className="hidden md:block" />
+                  <p className="max-w-2xl text-sm leading-6 text-white/54 md:text-[0.95rem]">
+                    A steady progression from hands-on editing roles into production leadership and motion-focused brand communication.
+                  </p>
+                </div>
                 <div className="space-y-10">
-                  {careerTimeline.map((entry) => (
-                    <article key={`${entry.company}-${entry.period}`} className="grid gap-5 md:grid-cols-[6.25rem_1.5rem_minmax(0,1fr)] lg:grid-cols-[9rem_2rem_minmax(0,1fr)]">
+                  {careerTimeline.map((entry, index) => (
+                    <article
+                      key={`${entry.company}-${entry.period}`}
+                      className="grid gap-5 md:grid-cols-[8.5rem_2.5rem_minmax(0,1fr)] lg:grid-cols-[10rem_2.75rem_minmax(0,1fr)]"
+                    >
                       <div className="space-y-2 pt-1">
-                        <p className="text-xs uppercase tracking-[0.22em] text-white/42 md:text-[11px]">{entry.period}</p>
+                        <p className="text-xs uppercase tracking-[0.2em] text-white/40 md:text-[11px]">{entry.period}</p>
                         <div>
-                          <p className="font-display text-xl leading-tight">{entry.role}</p>
-                          <p className="mt-2 text-sm text-white/46">{entry.location}</p>
+                          <p className="font-display text-lg leading-tight md:text-[1.35rem]">{entry.role}</p>
+                          <p className="mt-2 text-sm text-white/42">{entry.location}</p>
                         </div>
                       </div>
 
-                      <div className="relative hidden md:flex md:justify-center">
-                        <span className="relative top-2 h-4 w-4 rounded-full border border-white/12 bg-[#d97a32] shadow-[0_0_0_8px_rgba(217,122,50,0.12)]" />
+                      <div className="relative hidden md:block">
+                        <span
+                          className={[
+                            "absolute left-1/2 w-px -translate-x-1/2 bg-white/14",
+                            index === 0 ? "top-5 bottom-0" : index === careerTimeline.length - 1 ? "top-0 bottom-8" : "inset-y-0",
+                          ].join(" ")}
+                        />
+                        <span className="absolute left-1/2 top-5 h-4 w-4 -translate-x-1/2 rounded-full bg-[#d97a32]/22 animate-ping" />
+                        <span className="absolute left-1/2 top-5 h-4 w-4 -translate-x-1/2 rounded-full border border-white/12 bg-[#d97a32] shadow-[0_0_0_8px_rgba(217,122,50,0.09)]" />
                       </div>
 
-                      <div className="rounded-[1.25rem] border border-white/8 bg-white/[0.025] p-5 md:p-6">
-                        <h3 className="font-display text-2xl leading-tight md:text-[2rem]">{entry.company}</h3>
-                        <p className="mt-4 text-base leading-7 text-white/66">{entry.summary}</p>
+                      <div className="rounded-[1.25rem] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.028),rgba(255,255,255,0.012))] p-5 md:p-6">
+                        <h3 className="font-display text-[1.6rem] leading-tight md:text-[1.9rem]">{entry.company}</h3>
+                        <p className="mt-4 text-[0.97rem] leading-7 text-white/66">{entry.summary}</p>
                         {entry.bullets?.length ? (
-                          <ul className="mt-5 space-y-3 text-sm leading-6 text-white/58 md:text-base md:leading-7">
+                          <ul className="mt-5 space-y-3 text-sm leading-6 text-white/58 md:text-[0.96rem] md:leading-7">
                             {entry.bullets.map((bullet) => (
                               <li key={bullet} className="flex gap-3">
-                                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#d97a32]" />
+                                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#d97a32] animate-pulse" />
                                 <span>{bullet}</span>
                               </li>
                             ))}
@@ -115,22 +142,23 @@ export default function WorksPage() {
 
               <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-1">
                 <Panel title="Core Skills">
-                  <div className="flex flex-wrap gap-3">
+                  <div className="grid gap-3">
                     {coreSkills.map((skill) => (
-                      <span
+                      <div
                         key={skill}
-                        className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-white/66"
+                        className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/66"
                       >
-                        {skill}
-                      </span>
+                        <SkillIcon label={skill} />
+                        <span>{skill}</span>
+                      </div>
                     ))}
                   </div>
                 </Panel>
 
-                <Panel title="AI Tools">
+                <Panel title="Tools In Use">
                   <div className="grid gap-3">
                     {aiTools.map((tool) => (
-                      <div key={tool} className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/66">
+                      <div key={tool} className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/66">
                         {tool}
                       </div>
                     ))}
@@ -138,9 +166,9 @@ export default function WorksPage() {
                 </Panel>
               </div>
 
-              <div className="rounded-[1.5rem] border border-[#d97a32]/18 bg-[linear-gradient(135deg,rgba(217,122,50,0.16),rgba(255,255,255,0.03))] p-6">
+              <div className="rounded-[1.5rem] border border-[#d97a32]/18 bg-[linear-gradient(135deg,rgba(217,122,50,0.15),rgba(255,255,255,0.03))] p-6">
                 <p className="text-xs uppercase tracking-[0.28em] text-white/44">Portfolio link</p>
-                <h3 className="mt-3 font-display text-2xl">See how that experience shows up in the work.</h3>
+                <h3 className="mt-3 font-display text-[1.8rem] leading-tight">See how that experience shows up in the work.</h3>
                 <p className="mt-3 text-sm leading-6 text-white/62">
                   Jump back into the motion showcase and case studies to connect the timeline with the finished visual output.
                 </p>
@@ -164,7 +192,7 @@ function Metric({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
       <p className="text-[11px] uppercase tracking-[0.24em] text-white/38">{label}</p>
-      <p className="mt-3 font-display text-3xl">{value}</p>
+      <p className="mt-3 font-display text-[2rem]">{value}</p>
     </div>
   );
 }
@@ -176,4 +204,27 @@ function Panel({ title, children }: { title: string; children: ReactNode }) {
       <div className="mt-5">{children}</div>
     </section>
   );
+}
+
+function SkillIcon({ label }: { label: string }) {
+  const iconClass = "h-4 w-4 text-white/52";
+
+  switch (label) {
+    case "Video Production":
+      return <Clapperboard className={iconClass} />;
+    case "Motion Graphics":
+      return <MonitorPlay className={iconClass} />;
+    case "Brand Storytelling":
+      return <MessageSquareText className={iconClass} />;
+    case "Cinematic Editing":
+      return <Scissors className={iconClass} />;
+    case "Visual Communication":
+      return <SwatchBook className={iconClass} />;
+    case "Creative Direction":
+      return <Compass className={iconClass} />;
+    case "AI-Assisted Visuals":
+      return <Sparkles className={iconClass} />;
+    default:
+      return null;
+  }
 }
