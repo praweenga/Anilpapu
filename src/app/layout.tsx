@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Lato, Manrope } from "next/font/google";
-import BottomNav from "@/components/site/bottom-nav";
-import Footer from "@/components/site/footer";
+import SiteChrome from "@/components/site/site-chrome";
 import "./globals.css";
 
 const display = Lato({
@@ -61,8 +60,7 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${display.variable} ${sans.variable} ${geistMono.variable} bg-black antialiased`} suppressHydrationWarning>
         {children}
-        <BottomNav />
-        <Footer />
+        <SiteChrome />
       </body>
     </html>
   );
